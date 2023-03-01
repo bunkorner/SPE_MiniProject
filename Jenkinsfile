@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage("GIT CHECKOUT")
+        stage("Print Hello")
         {
             steps
             {
-                git 'https://github.com/bunkorner/SPE_MiniProject.git'
+                sh 'echo "Hello"'
             }
         }
     }
