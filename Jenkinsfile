@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage("git login")
+        stage("GIT CHECKOUT")
         {
             steps
             {
