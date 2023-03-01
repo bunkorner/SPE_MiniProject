@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage("Print Hello")
+        stage("MAVEN BUILD")
         {
             steps
             {
-                sh 'echo "Hello"'
+                sh 'mvn clean install'
             }
         }
     }
