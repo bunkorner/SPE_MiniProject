@@ -20,11 +20,14 @@ pipeline {
         }
         stage("DOCKER IMAGE PUSH")
         {
-            withCredentials([string(credentialsId: 'DockerPassword', variable: 'DockerCredentials')])
+            steps
             {
-                sh 'docker login -u bunkorner -p ${DockerCredentials}'
-                sh 'docker image push gr/minicalculator:v1.$BUILD_ID'
-                sh 'docker image push gr/minicalculator:latest'
+                withCredentials([string(credentialsId: 'DockerPassword', variable: 'DockerCredentials')])
+                {
+                    sh 'docker login -u bunkorner -p ${DockerCredentials}'
+                    sh 'docker image push gr/minicalculator:v1.$BUILD_ID'
+                    sh 'docker image push gr/minicalculator:latest'
+                }
             }
         }
     }
