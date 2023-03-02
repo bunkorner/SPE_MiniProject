@@ -63,7 +63,7 @@ public class Calc {
 //
 //                    break;
                 default:
-                    System.out.println("Exiting....");
+                    System.out.println("Bye Bye!");
                     return;
             }
         } while (true);
