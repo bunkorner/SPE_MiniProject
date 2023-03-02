@@ -14,8 +14,8 @@ pipeline {
             steps
             {
                 sh 'docker image build -t minicalculator:v1.$BUILD_ID .'
-                sh 'docker image tag minicalculator:v1.$BUILD_ID gr/minicalculator:v1.$BUILD_ID'
-                sh 'docker image tag minicalculator:v1.$BUILD_ID gr/minicalculator:latest'
+                sh 'docker image tag minicalculator:v1.$BUILD_ID bunkorner/minicalculator:v1.$BUILD_ID'
+                sh 'docker image tag minicalculator:v1.$BUILD_ID bunkorner/minicalculator:latest'
             }
         }
         stage("DOCKER IMAGE PUSH")
@@ -25,8 +25,8 @@ pipeline {
                 withCredentials([string(credentialsId: 'DockerPassword', variable: 'DockerCredentials')])
                 {
                     sh 'docker login -u bunkorner -p ${DockerCredentials}'
-                    sh 'docker image push gr/minicalculator:v1.$BUILD_ID'
-                    sh 'docker image push gr/minicalculator:latest'
+                    sh 'docker image push bunkorner/minicalculator:v1.$BUILD_ID'
+                    sh 'docker image push bunkorner/minicalculator:latest'
                 }
             }
         }
