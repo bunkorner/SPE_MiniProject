@@ -14,8 +14,8 @@ pipeline {
             steps
             {
                 sh 'docker image build -t minicalculator:v1.$BUILD_ID .'
-                sh 'docker image tag $JOB_NAME:v1.$BUILD_ID gr/minicalculator:v1.$BUILD_ID'
-                sh 'docker image tag $JOB_NAME:v1.$BUILD_ID gr/minicalculator:latest'
+                sh 'docker image tag minicalculator:v1.$BUILD_ID gr/minicalculator:v1.$BUILD_ID'
+                sh 'docker image tag minicalculator:v1.$BUILD_ID gr/minicalculator:latest'
             }
         }
     }
