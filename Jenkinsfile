@@ -9,13 +9,22 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage("DOCKER BUILD")
+        stage("DOCKER IMAGE BUILD")
         {
             steps
             {
                 sh 'docker image build -t minicalculator:v1.$BUILD_ID .'
                 sh 'docker image tag minicalculator:v1.$BUILD_ID gr/minicalculator:v1.$BUILD_ID'
                 sh 'docker image tag minicalculator:v1.$BUILD_ID gr/minicalculator:latest'
+            }
+        }
+        stage("DOCKER IMAGE PUSH")
+        {
+            withCredentials([string(credentialsId: 'DockerPassword', variable: 'DockerCredentials')])
+            {
+                sh 'docker login -u bunkorner -p ${DockerCredentials}'
+                sh 'docker image push gr/minicalculator:v1.$BUILD_ID'
+                sh 'docker image push gr/minicalculator:latest'
             }
         }
     }
