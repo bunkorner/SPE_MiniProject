@@ -14,6 +14,5 @@
     - name: Build Docker image from Dockerfile
       docker_image:
         name: MySPE_MiniCalc
-        dest: /home/ubuntu/ansible
         path: docker
         state: build
