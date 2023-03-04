@@ -11,3 +11,9 @@
         dest: /home/ubuntu/ansible
     - name: maven clean package
       command: mvn -f /home/ubuntu/ansible/pom.xml clean package
+    - name: Build Docker image from Dockerfile
+      docker_image:
+        name: MySPE_MiniCalc
+        dest: /home/ubuntu/ansible
+        path: docker
+        state: build
