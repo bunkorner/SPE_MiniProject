@@ -5,6 +5,10 @@
   become_user: root
   tasks:
     - name: Git checkout
+      register: source_code_clones
       ansible.builtin.git:
         repo: 'https://github.com/bunkorner/SPE_MiniProject.git'
         dest: /home/ubuntu/ansible
+    - name: "mvn clean task output"
+      debug:
+        var: source_code_clones
