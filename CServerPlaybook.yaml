@@ -15,6 +15,6 @@
       docker_image:
         name: democontainer:v1.0
         build:
-          path: /home/ubuntu/ansible/Dockerfile
+          path: /home/ubuntu/ansible
           source: build
         state: present
