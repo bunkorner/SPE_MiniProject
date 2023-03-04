@@ -16,5 +16,5 @@
         name: democontainer:v1.0
         build:
           path: /home/ubuntu/ansible
-          source: build
+        source: build
         state: present
