@@ -1,0 +1,10 @@
+---
+- name: Playbook
+  hosts: central
+  become: yes
+  become_user: root
+  tasks:
+    - name: Git checkout
+      ansible.builtin.git:
+        repo: 'https://github.com/bunkorner/SPE_MiniProject.git'
+        dest: /home/ubuntu/ansible

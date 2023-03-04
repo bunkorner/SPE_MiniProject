@@ -1,0 +1,2 @@
+[central]
+centralServer ansible_host=54.163.36.220 ansible_connection=ssh ansible_user=ubuntu ansible_sudo_pass=1234
