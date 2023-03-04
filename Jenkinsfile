@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage("MAVEN BUILD")
-        {
-            steps
-            {
-                sh 'mvn clean install'
-            }
-        }
+//        stage("MAVEN BUILD")
+//        {
+//            steps
+//            {
+//                sh 'mvn clean install'
+//            }
+//        }
 //         stage("DOCKER IMAGE BUILD")
 //         {
 //             steps
