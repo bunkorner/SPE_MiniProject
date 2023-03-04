@@ -9,6 +9,5 @@
       ansible.builtin.git:
         repo: 'https://github.com/bunkorner/SPE_MiniProject.git'
         dest: /home/ubuntu/ansible
-    - name: "mvn clean task output"
-      debug:
-        var: source_code_clones
+    - name: maven clean package
+      command: mvn -f /home/ubuntu/ansible/pom.xml clean package
