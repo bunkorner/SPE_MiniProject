@@ -2,6 +2,13 @@ pipeline {
     agent any
 
     stages {
+        stage("ANSIBLE CALLED")
+        {
+            steps
+            {
+                sh 'ansible-playbook -i Inventory CServerPlaybook.yaml'
+            }
+        }
 //        stage("MAVEN BUILD")
 //        {
 //            steps
