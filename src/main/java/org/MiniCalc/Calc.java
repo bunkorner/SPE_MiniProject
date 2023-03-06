@@ -15,7 +15,7 @@ public class Calc {
         do {
             System.out.println("Scientific Calculator using DevOps. \n Choose operation:");
             System.out.println("1. Factorial");
-//            System.out.println("2. Square root");
+            System.out.println("2. Square root");
 //            System.out.println("3. Power");
 //            System.out.println("4. Natural Logarithm");
             System.out.println("0. Exit");
