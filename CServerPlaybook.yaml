@@ -18,3 +18,9 @@
           path: /home/ubuntu/ansible
         source: build
         state: present
+    - name: Tag and push to docker hub
+      community.docker.docker_image:
+        name: bunkorner/democontainer:latest
+        repository: bunkorner/democontainer:latest
+        push: true
+        source: local
