@@ -9,13 +9,13 @@ pipeline {
                 sh 'ansible-playbook -i Inventory CServerPlaybook.yaml'
             }
         }
-//         stage("ANSIBLE - Deploy Server")
-//         {
-//             steps
-//             {
-//                 sh 'ansible-playbook -i Inventory DeployPlaybook.yaml'
-//             }
-//         }
+        stage("ANSIBLE - Deploy Server")
+        {
+            steps
+            {
+                sh 'ansible-playbook -i Inventory DeployPlaybook.yaml'
+            }
+        }
 //        stage("MAVEN BUILD")
 //        {
 //            steps
