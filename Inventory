@@ -1,2 +1,4 @@
 [central]
 centralServer ansible_host=3.80.221.157 ansible_connection=ssh ansible_user=ubuntu ansible_sudo_pass=1234
+[deploy]
+deployServer ansible_host=18.212.208.1 ansible_connection=ssh ansible_user=ubuntu ansible_sudo_pass=1234
