@@ -4,6 +4,10 @@
   become: yes
   become_user: root
   tasks:
+    - name: Remove directory
+      file:
+        path: /home/ubuntu/ansible
+        state: absent
     - name: Git checkout
       register: source_code_clones
       ansible.builtin.git:
