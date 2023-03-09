@@ -1,0 +1,16 @@
+---
+- name: Playbook
+  hosts: deploy
+  become: yes
+  become_user: root
+  tasks:
+    - name: Start docker service
+      service:
+        name: docker
+        state: started
+
+    - name: pull docker image
+      shell: docker pull bunkorner/democontainer
+
+    - name: running container
+      shell: docker create -i -t --name minicalc bunkorner/democontainer
