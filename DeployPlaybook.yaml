@@ -13,4 +13,4 @@
       shell: docker pull bunkorner/democontainer
 
     - name: running container
-      shell: docker create -i -t --name minicalc1 bunkorner/democontainer
+      shell: docker create -i -t --name minicalc bunkorner/democontainer
