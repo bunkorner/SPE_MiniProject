@@ -18,7 +18,7 @@ public class Calc {
         do {
             System.out.println("Scientific Calculator using DevOps. \n Choose operation:");
             System.out.println("1. Factorial");
-            System.out.println("2. Square root");
+//            System.out.println("2. Square root");
 //            System.out.println("3. Power");
 //            System.out.println("4. Natural Logarithm");
             System.out.println("0. Exit");
@@ -39,14 +39,14 @@ public class Calc {
                     System.out.println("\n");
 
                     break;
-                case 2:
-                    // Square root
-                    System.out.print("Enter a number : ");
-                    number1 = scanner.nextDouble();
-                    System.out.println("Square root of "+number1+" is : " + calculator.squareRoot(number1));
-                    System.out.println("\n");
-
-                    break;
+//                case 2:
+//                    // Square root
+//                    System.out.print("Enter a number : ");
+//                    number1 = scanner.nextDouble();
+//                    System.out.println("Square root of "+number1+" is : " + calculator.squareRoot(number1));
+//                    System.out.println("\n");
+//
+//                    break;
 //                case 3:
 //                    // Power
 //                    System.out.print("Enter the first number : ");
@@ -81,10 +81,12 @@ public class Calc {
 
 
 
-    public double squareRoot(double number1) {
-        double result = Math.sqrt(number1);
-        return result;
-    }
+//    public double squareRoot(double number1) {
+//        logger.info("[Square Root] - " + number1);
+//        double result = Math.sqrt(number1);
+//        logger.info("[RESULT - Square Root] - " + result);
+//        return result;
+//    }
 //
 //
 //    public double power(double number1, double number2) {
