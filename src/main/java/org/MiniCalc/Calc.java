@@ -16,7 +16,7 @@ public class Calc {
         Scanner scanner = new Scanner(System.in);
         double number1, number2;
         do {
-            System.out.println("Scientific Calculator using DevOps. \n Choose operation:");
+            System.out.println("Choose operation:");
             System.out.println("1. Factorial");
 //            System.out.println("2. Square root");
 //            System.out.println("3. Power");
